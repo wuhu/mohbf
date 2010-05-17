@@ -5,7 +5,7 @@ import pylab as mpl
 mpl.rcParams['image.interpolation'] = 'nearest'
 mpl.gray()
 
-IMAGE_PATH = "/home/mohbf/images/"
+IMAGE_PATH = "/home/hu/UNI/mohbf1/images/"
 IMAGE_SHAPE = (1020, 1532)
 
 def show_image(image, title=None):
