@@ -6,8 +6,7 @@ import pylab as mpl
 from common import import_pics, show_image, IMAGE_PATH
 from 1.3 import get_patch, normalize_set
 
-# 500 16x16 
-
+# take 500 random images and slice out 16x16 patches
 image_list = listdir(IMAGE_PATH)
 patches = []
 for i in range(500)
@@ -15,15 +14,14 @@ for i in range(500)
   patches.append(get_patch(im,16))
   patches = normalize_set(patches)
 
-# white noise
-
+# generate white noise images
 noises = []
 for i in range(500)
   noises.append(np.random.normal(0, 15000, (16, 16)))
   normalize_set(noises)
   noises = normalize_set(noises)
 
-# filtered white noise
+# generate smoothed white noise images
 fnoises = []
 for i in range(500)
   noise = np.random.normal(0, 15000, (16, 16))
